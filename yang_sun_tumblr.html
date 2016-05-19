@@ -1,0 +1,88 @@
+<html>
+ 
+ <head>
+ <style>
+     header{
+         background-image:url('http://i.imgur.com/8D6ev3N.jpg');
+         height:200px;
+         Padding:25px;
+     }
+     h1 { 
+        color: black;
+        font-family:Snell Roundhand;
+        font-size:50px;
+        text-align:center;
+      
+        background-color:AntiqueWhite;
+       
+     }
+     h2{
+        color:black;
+        font-family:Bradley Hand;
+        font-size:30px;
+        text-align:center;
+        margin-top:60px;
+     }
+     h3{
+         color:black;
+         font-family:Bradley Hand;
+         font-size:25px;
+         text-align:center;
+         margin-top:60px;
+     }
+      h4{
+         color:black;
+         font-family:Bradley Hand;
+         font-size:15px;
+         text-align:center;
+         margin:15px 100px 15px 100px;
+         
+     }
+     h5{
+         color:black;
+         font-family:Snell Roundhand;
+         font-size:12px;
+         text-align:center;
+         margin-top:15px;
+     }
+     article{
+         text-align:center;
+     }
+     
+ </style>
+ </head>
+<header>
+<h1>{Title}</h1> 
+<h2>{Description}</h2>
+</header>
+<section>
+{block:Posts} 
+
+    {block:Text} 
+        <article>
+            <h3>{title}</h3>
+            <h4>{body}</h4>
+        </article>
+    {/block:Text}
+
+    {block:Photo} 
+        <article>
+       
+            <img src="{PhotoURL-HighRes}">
+       </article>
+    
+    
+    {/block:Photo}
+
+    {block:Date}
+        <h5>{Month} {DayOfMonth} {year}</h5>
+    {/block:Date}
+
+
+
+{/block:Posts}    
+    
+    
+</section>
+
+</html>
